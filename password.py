@@ -1,6 +1,6 @@
 import random
 alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$&"
-pwsd_len = 8
+pwsd_len = 9
 pwsd = ""
 
 choice = int(input("Generate Password By\n1.Manual Method\n2.Random Method\nEnter Your Choice:"))
@@ -59,7 +59,7 @@ if (choice == 1):
             break
 
 else:
-    for i in range(9):
+    for i in range(pwsd_len):
         next_index = random.randrange(len(alphabets))
         pwsd = pwsd + alphabets[next_index]
 	
@@ -70,6 +70,3 @@ if (pwsd == pswd):
     print("Login Success")
 else:
     print("Password Incorrect\nTry Generating New Password")
-
-
-
